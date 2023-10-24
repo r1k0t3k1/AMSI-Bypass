@@ -17,10 +17,19 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v4
-    
-    - name: Build
-      run: cargo build --verbose --manifest-path=Patching_AmsiScanBuffer/Cargo.toml
-    
+  
+    - name: build 
+      uses: houseabsolute/actions-rust-cross@v0
+      with:
+        command: "build"
+        target: x86_64-pc-windows-msvc 
+        toolchain: nightly
+        args: "--locked"
+        strip: true 
+
+    - name: list files
+      run: ls -R
+
     - name: upload artifact 
       uses: actions/upload-artifact@v3
       with:
