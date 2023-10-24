@@ -27,7 +27,7 @@ jobs:
       uses: houseabsolute/actions-rust-cross@v0
       with:
         command: "build"
-        target: x86_64-pc-windows-msvc 
+        target: x86_64-pc-windows-gnu
         toolchain: nightly
         args: "--locked --manifest-path=Patching_AmsiScanBuffer/Cargo.toml"
         strip: false
