@@ -33,5 +33,5 @@ jobs:
     - name: upload artifact 
       uses: actions/upload-artifact@v3
       with:
-        name: Patching_****ScanBuffer.dll
+        name: Patching_####ScanBuffer.dll
         path: Patching_AmsiScanBuffer\target\x86_64-pc-windows-msvc\debug\AMSIBypassDLL.dll
