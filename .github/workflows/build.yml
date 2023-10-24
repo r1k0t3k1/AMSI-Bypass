@@ -15,15 +15,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: change directory
-    - run: cd Patching_AmsiScanBuffer
+      - uses: actions/checkout@v4
+      - name: change directory
+      - run: cd Patching_AmsiScanBuffer
 
-    - name: Build
-    - run: cargo build --verbose
+      - name: Build
+      - run: cargo build --verbose
     
-    - uses: actions/upload-artifact@v3
-    - name: upload artifact 
-      with:
-        name: Patching_****ScanBuffer.dll
-        path: target/debug/AMSIBypassDLL.dll
+      - uses: actions/upload-artifact@v3
+      - name: upload artifact 
+        with:
+          name: Patching_****ScanBuffer.dll
+          path: target/debug/AMSIBypassDLL.dll
