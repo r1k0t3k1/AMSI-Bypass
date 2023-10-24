@@ -28,7 +28,7 @@ jobs:
         strip: false
 
     - name: list files
-      run:  dir /s
+      run:  gci -recurse
 
     - name: upload artifact 
       uses: actions/upload-artifact@v3
