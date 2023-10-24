@@ -44,4 +44,4 @@ jobs:
     - name: release
       uses: ncipollo/release-action@v1
       with:
-        artifacts: Patching_AmsiScanBuffer\target\x86_64-pc-windows-msvc\debug\Patching_AmsiScanBuffer.dll
+        artifacts: Patching_AmsiScanBuffer\target\x86_64-pc-windows-msvc\debug\Patching_0000ScanBuffer.dll
