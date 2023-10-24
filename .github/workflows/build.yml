@@ -39,4 +39,4 @@ jobs:
     - name: release
       uses: ncipollo/release-action@v1
       with:
-        path: "Patching_AmsiScanBuffer\target\x86_64-pc-windows-msvc\debug\AMSIBypassDLL.dll"
+        path: Patching_AmsiScanBuffer\target\x86_64-pc-windows-msvc\debug\AMSIBypassDLL.dll
