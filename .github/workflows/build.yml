@@ -25,7 +25,7 @@ jobs:
         target: x86_64-pc-windows-msvc 
         toolchain: nightly
         args: "--locked --manifest-path=Patching_AmsiScanBuffer/Cargo.toml"
-        strip: true 
+        strip: false
 
     - name: upload artifact 
       uses: actions/upload-artifact@v3
