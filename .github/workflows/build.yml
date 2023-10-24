@@ -3,6 +3,9 @@ name: Rust
 on:
   push:
     branches: [ "main" ]
+    tags:
+      - '*'
+
   pull_request:
     branches: [ "main" ]
 
@@ -13,6 +16,8 @@ jobs:
   build:
 
     runs-on: windows-latest
+    permissions:
+      contents: write
 
     steps:
     - name: checkout
