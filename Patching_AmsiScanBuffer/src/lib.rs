@@ -22,7 +22,7 @@ extern "system" fn DllMain(dll_module: HMODULE, call_reason: u32, _: *mut ()) ->
 }
 
 fn attach() {
-    let result = unsafe { LoadLibraryW(w!("amsi.dll")) };
+    let result = unsafe { LoadLibraryW(w!("C:\\Windows\\System32\\amsi.dll")) };
     if result.is_err() {
         println!("Failed to load 'amsi.dll'");
     }
