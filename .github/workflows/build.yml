@@ -38,10 +38,10 @@ jobs:
     - name: upload artifact 
       uses: actions/upload-artifact@v3
       with:
-        name: Patching_####ScanBuffer.dll
-        path: Patching_AmsiScanBuffer\target\x86_64-pc-windows-msvc\debug\AMSIBypassDLL.dll
+        name: Patching_0000ScanBuffer.dll
+        path: Patching_AmsiScanBuffer\target\x86_64-pc-windows-msvc\debug\Patching_0000ScanBuffer.dll
     
     - name: release
       uses: ncipollo/release-action@v1
       with:
-        artifacts: Patching_AmsiScanBuffer\target\x86_64-pc-windows-msvc\debug\AMSIBypassDLL.dll
+        artifacts: Patching_AmsiScanBuffer\target\x86_64-pc-windows-msvc\debug\Patching_AmsiScanBuffer.dll

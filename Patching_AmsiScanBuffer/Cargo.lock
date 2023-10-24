@@ -3,7 +3,7 @@
 version = 3
 
 [[package]]
-name = "AMSIBypassDLL"
+name = "Patching-0000ScanBuffer"
 version = "0.1.0"
 dependencies = [
  "windows",
