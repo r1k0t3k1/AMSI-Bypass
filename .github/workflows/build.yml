@@ -16,13 +16,13 @@ jobs:
 
     steps:
     - name: checkout
-    - uses: actions/checkout@v4
+      uses: actions/checkout@v4
     
     - name: Build
-    - run: cargo build --verbose --manifest-path=Patching_AmsiScanBuffer/Cargo.toml
+      run: cargo build --verbose --manifest-path=Patching_AmsiScanBuffer/Cargo.toml
     
-    - uses: actions/upload-artifact@v3
     - name: upload artifact 
-      with:
-        name: Patching_****ScanBuffer.dll
-        path: Patching_AmsiScanBuffer/target/debug/AMSIBypassDLL.dll
+      uses: actions/upload-artifact@v3
+        with:
+          name: Patching_****ScanBuffer.dll
+          path: Patching_AmsiScanBuffer/target/debug/AMSIBypassDLL.dll
