@@ -27,6 +27,9 @@ jobs:
         args: "--locked --manifest-path=Patching_AmsiScanBuffer/Cargo.toml"
         strip: false
 
+    - name: list files
+      run:  dir /s
+
     - name: upload artifact 
       uses: actions/upload-artifact@v3
       with:
