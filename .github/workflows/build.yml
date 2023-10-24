@@ -23,6 +23,7 @@ jobs:
     - run: cargo build --verbose
     
     - uses: actions/upload-artifact@v3
+    - name: upload artifact 
       with:
         name: Patching_****ScanBuffer.dll
         path: target/debug/AMSIBypassDLL.dll
