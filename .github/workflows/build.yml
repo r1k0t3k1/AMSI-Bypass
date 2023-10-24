@@ -24,7 +24,7 @@ jobs:
         command: "build"
         target: x86_64-pc-windows-msvc 
         toolchain: nightly
-        args: "--locked"
+        args: "--locked --manifest-path=Patching_AmsiScanBuffer/Cargo.toml"
         strip: true 
 
     - name: list files
